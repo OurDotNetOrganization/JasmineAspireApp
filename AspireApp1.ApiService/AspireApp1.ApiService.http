@@ -1,0 +1,42 @@
+@ApiService_HostAddress = http://localhost:5389
+
+GET {{ApiService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{ApiService_HostAddress}}/api/profile/public
+Accept: application/json
+
+###
+
+POST {{ApiService_HostAddress}}/api/contact-leads
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test.user@example.com",
+  "organization": "Example Org",
+  "message": "Hello — this is a test inquiry with enough characters."
+}
+
+###
+
+# Development-only: obtain an Admin JWT (see appsettings.Development.json Jwt:DevAdmin*)
+# @name adminToken
+POST {{ApiService_HostAddress}}/api/auth/token
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "ChangeMe!"
+}
+
+###
+
+# Paste Bearer token from adminToken response (accessToken field)
+GET {{ApiService_HostAddress}}/api/contact-leads
+Accept: application/json
+Authorization: Bearer {{adminToken.response.body.accessToken}}
+
+###

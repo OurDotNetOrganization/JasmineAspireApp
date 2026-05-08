@@ -1,0 +1,134 @@
+.jasmine-hero {
+    background: linear-gradient(135deg, #0f2847 0%, #1a4d6d 45%, #2d6a7a 100%);
+    padding: 3rem 1.5rem 3.5rem;
+}
+
+.jasmine-hero-inner {
+    max-width: 52rem;
+    margin: 0 auto;
+}
+
+.jasmine-kicker {
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.jasmine-tagline {
+    font-size: 1.1rem;
+    max-width: 42rem;
+    opacity: 0.95;
+}
+
+.jasmine-body {
+    background: linear-gradient(180deg, #f4f7fb 0%, #eef2f7 100%);
+    min-height: 40vh;
+    outline: none;
+}
+
+.container-narrow {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.letter-spacing {
+    letter-spacing: 0.08em;
+}
+
+.jasmine-section-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #5c6b7a;
+    margin-bottom: 1rem;
+}
+
+.jasmine-outcome-list {
+    padding-left: 1.25rem;
+    margin: 0;
+    color: #3d4f5f;
+}
+
+    .jasmine-outcome-list li {
+        margin-bottom: 0.65rem;
+    }
+
+        .jasmine-outcome-list li:last-child {
+            margin-bottom: 0;
+        }
+
+.jasmine-focus-card {
+    border-color: #e2e8f0 !important;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+    .jasmine-focus-card:hover {
+        box-shadow: 0 0.5rem 1.25rem rgba(15, 40, 71, 0.08) !important;
+        transform: translateY(-2px);
+    }
+
+.jasmine-pill {
+    background: #e8f1f5;
+    color: #0f2847;
+    font-weight: 500;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #c5dbe4;
+}
+
+.jasmine-cta {
+    background: linear-gradient(90deg, #14395c, #1f6b7c);
+}
+
+.jasmine-card {
+    border-color: #e2e8f0 !important;
+}
+
+.jasmine-highlights .jasmine-bullet {
+    flex-shrink: 0;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-top: 0.35rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a4d6d, #2d6a7a);
+}
+
+/* Skip link: visible when focused (keyboard users) */
+.jasmine-skip {
+    z-index: 1080;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+}
+
+    .jasmine-skip:focus {
+        clip: auto;
+        width: auto;
+        height: auto;
+        margin: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        overflow: visible;
+        white-space: normal;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+
+/* Stronger focus rings for keyboard navigation */
+.jasmine-hero a:focus-visible,
+.jasmine-body a:focus-visible,
+.jasmine-cta a:focus-visible {
+    outline: 3px solid #7ec8e3;
+    outline-offset: 2px;
+}
+
+.jasmine-hero .btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}

@@ -1,0 +1,21 @@
+<Solution>
+  <Project Path="Aspire1.ServiceDefaults1/Aspire1.ServiceDefaults1.csproj" />
+  <Project Path="AspireApp1.ApiService/AspireApp1.ApiService.csproj" />
+  <Project Path="AspireApp1.AppHost/AspireApp1.AppHost.csproj" />
+  <Project Path="AspireApp1.ServiceDefaults/AspireApp1.ServiceDefaults.csproj" />
+  <Project Path="AspireApp1.Tests/AspireApp1.Tests.csproj" />
+  <Project Path="AspireApp1.Web/AspireApp1.Web.csproj" />
+  <Project Path="MauiApp2/MauiApp2.Droid/MauiApp2.Droid.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="MauiApp2/MauiApp2.iOS/MauiApp2.iOS.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="MauiApp2/MauiApp2.Mac/MauiApp2.Mac.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="MauiApp2/MauiApp2.WinUI/MauiApp2.WinUI.csproj">
+    <Platform Project="x64" />
+  </Project>
+  <Project Path="MauiApp2/MauiApp2/MauiApp2.csproj" />
+</Solution>

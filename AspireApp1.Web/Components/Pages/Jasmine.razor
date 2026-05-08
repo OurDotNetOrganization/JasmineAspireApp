@@ -1,0 +1,293 @@
+@page "/jasmine"
+@rendermode InteractiveServer
+
+@inject ProfileApiClient ProfileApi
+@inject ContactApiClient ContactApi
+
+<PageTitle>Jasmine Dwidar — Marketing, Communications &amp; Partnerships</PageTitle>
+
+<a href="#jasmine-main" class="jasmine-skip btn btn-sm btn-outline-secondary position-absolute m-2">Skip to main content</a>
+
+@if (!string.IsNullOrEmpty(_loadError))
+{
+    <div class="container py-5">
+        <div class="alert alert-danger" role="alert">
+            @_loadError
+        </div>
+    </div>
+}
+else if (_profile is null)
+{
+    <div class="container py-5">
+        <p class="lead"><em>Loading profile…</em></p>
+    </div>
+}
+else
+{
+    <section class="jasmine-hero text-white" aria-labelledby="jasmine-hero-heading">
+        <div class="jasmine-hero-inner">
+            <p class="jasmine-kicker mb-2">@_profile.Kicker</p>
+            <h1 id="jasmine-hero-heading" class="display-5 fw-semibold mb-3">@_profile.FullName</h1>
+            <p class="jasmine-tagline lead mb-4">@_profile.HeroParagraph</p>
+            <div class="d-flex flex-wrap gap-2" role="group" aria-label="Primary actions">
+                <a class="btn btn-light btn-lg"
+                   href="@_profile.Links.LinkedIn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open Jasmine Dwidar on LinkedIn (opens in a new tab)">
+                    Message on LinkedIn
+                </a>
+                <a class="btn btn-outline-light btn-lg" href="#jasmine-value">
+                    Why work together
+                </a>
+            </div>
+            <p class="small text-white-50 mt-3 mb-0">Partnerships, press, and speaking: LinkedIn is the fastest way to reach me.</p>
+        </div>
+    </section>
+
+    <div id="jasmine-main" class="jasmine-body py-5" tabindex="-1">
+        <div class="container-narrow">
+            <section class="mb-5" aria-labelledby="jasmine-value-heading">
+                <h2 id="jasmine-value-heading" class="jasmine-section-title">@_profile.ValueTitle</h2>
+                <p class="lead text-body-secondary mb-4">@_profile.ValueIntro</p>
+                <ul class="jasmine-outcome-list mb-0">
+                    @foreach (var item in _profile.ValueOutcomes)
+                    {
+                        <li>@item</li>
+                    }
+                </ul>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-focus-heading">
+                <h2 id="jasmine-focus-heading" class="jasmine-section-title">Focus areas</h2>
+                <div class="row g-3">
+                    @foreach (var card in _profile.FocusAreas)
+                    {
+                        <div class="col-md-4">
+                            <article class="jasmine-focus-card h-100 p-4 rounded-3 border bg-white shadow-sm">
+                                <h3 class="h6 text-uppercase text-primary letter-spacing mb-2">@card.Title</h3>
+                                <p class="text-body-secondary small mb-0">@card.Body</p>
+                            </article>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-roles-heading">
+                <h2 id="jasmine-roles-heading" class="jasmine-section-title">Current roles</h2>
+                <ul class="list-unstyled">
+                    @foreach (var role in _profile.CurrentRoles)
+                    {
+                        <li class="jasmine-card mb-3 p-4 rounded-3 border bg-white shadow-sm">
+                            <div class="d-flex flex-wrap justify-content-between gap-2 align-items-start">
+                                <div>
+                                    <h3 class="h5 mb-1">@role.Title</h3>
+                                    <p class="mb-0">
+                                        <a href="@role.CompanyUrl" class="fw-medium" target="_blank" rel="noopener noreferrer" aria-label="@(role.CompanyName) website (opens in a new tab)">@role.CompanyName</a>
+                                        <span class="text-body-secondary small">@role.CompanySubtitle</span>
+                                    </p>
+                                </div>
+                                <span class="text-secondary small text-nowrap">@role.DateRange</span>
+                            </div>
+                            <p class="text-body-secondary small mb-0 mt-2">@role.Description</p>
+                        </li>
+                    }
+                </ul>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-about-heading">
+                <h2 id="jasmine-about-heading" class="jasmine-section-title">About</h2>
+                <p class="fs-6 text-body-secondary lh-lg mb-3">@_profile.AboutBody</p>
+                <p class="text-body-secondary small mb-0"><strong>@_profile.AboutMetaLine</strong></p>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-highlights-heading">
+                <h2 id="jasmine-highlights-heading" class="jasmine-section-title">Public profile highlights</h2>
+                <p class="text-body-secondary small mb-3">@_profile.HighlightsIntro</p>
+                <ul class="list-unstyled jasmine-highlights">
+                    @foreach (var bullet in _profile.HighlightBullets)
+                    {
+                        <li class="d-flex gap-3 py-3 border-bottom">
+                            <span class="jasmine-bullet" aria-hidden="true"></span>
+                            <div>@bullet</div>
+                        </li>
+                    }
+                </ul>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-selected-heading">
+                <h2 id="jasmine-selected-heading" class="jasmine-section-title">Selected experience</h2>
+                <ul class="list-unstyled">
+                    @foreach (var line in _profile.SelectedExperience)
+                    {
+                        <li class="py-3 border-bottom">
+                            <div class="d-flex flex-wrap justify-content-between gap-2">
+                                <strong>@line.Title</strong>
+                                <span class="text-secondary small">@line.Period</span>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </section>
+
+            <section class="mb-5 p-4 rounded-3 border bg-white shadow-sm" aria-labelledby="jasmine-testimonial-heading">
+                <h2 id="jasmine-testimonial-heading" class="h6 text-uppercase text-secondary letter-spacing mb-3">Recommendation (LinkedIn)</h2>
+                <blockquote class="blockquote mb-2 fs-6 text-body-secondary">
+                    &ldquo;@_profile.TestimonialQuote&rdquo;
+                </blockquote>
+                <p class="small text-body-secondary mb-0">
+                    — @_profile.TestimonialAttribution
+                    <a href="@_profile.Links.LinkedIn" target="_blank" rel="noopener noreferrer" class="ms-1" aria-label="View profile on LinkedIn (opens in a new tab)">View on LinkedIn</a>
+                </p>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-edu-heading">
+                <h2 id="jasmine-edu-heading" class="jasmine-section-title">Education &amp; learning</h2>
+                <p class="mb-2"><strong>@_profile.EducationPrimary</strong></p>
+                <p class="text-body-secondary small mb-0">@_profile.EducationFootnote</p>
+            </section>
+
+            <section class="mb-5" aria-labelledby="jasmine-skills-heading">
+                <h2 id="jasmine-skills-heading" class="jasmine-section-title">Core strengths</h2>
+                <div class="d-flex flex-wrap gap-2" role="list">
+                    @foreach (var skill in _profile.Skills)
+                    {
+                        <span class="badge rounded-pill jasmine-pill" role="listitem">@skill</span>
+                    }
+                </div>
+            </section>
+
+            <section id="jasmine-contact" class="jasmine-cta p-4 rounded-3 text-white" aria-labelledby="jasmine-cta-heading">
+                <h2 id="jasmine-cta-heading" class="h5 mb-2">@_profile.CtaTitle</h2>
+                <p class="mb-3 opacity-90">@_profile.CtaBody</p>
+                <a class="btn btn-light mb-4"
+                   href="@_profile.Links.LinkedIn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Open Jasmine Dwidar on LinkedIn (opens in a new tab)">
+                    Open LinkedIn profile
+                </a>
+
+                <div class="bg-white text-dark rounded-3 p-4 text-start shadow-sm">
+                    <h3 class="h6 mb-3">Send a partnership inquiry</h3>
+                    @if (!string.IsNullOrEmpty(_submitSuccess))
+                    {
+                        <div class="alert alert-success" role="status">@_submitSuccess</div>
+                    }
+                    @if (!string.IsNullOrEmpty(_submitError))
+                    {
+                        <div class="alert alert-danger" role="alert">@_submitError</div>
+                    }
+                    <EditForm Model="_contact" OnValidSubmit="SubmitContactAsync">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary class="text-danger" />
+                        <div class="mb-3">
+                            <label class="form-label" for="contact-name">Name</label>
+                            <InputText id="contact-name" class="form-control" @bind-Value="_contact.Name" />
+                            <ValidationMessage For="() => _contact.Name" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="contact-email">Email</label>
+                            <InputText id="contact-email" type="email" class="form-control" @bind-Value="_contact.Email" />
+                            <ValidationMessage For="() => _contact.Email" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="contact-org">Organization (optional)</label>
+                            <InputText id="contact-org" class="form-control" @bind-Value="_contact.Organization" />
+                            <ValidationMessage For="() => _contact.Organization" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="contact-message">Message</label>
+                            <InputTextArea id="contact-message" class="form-control" rows="4" @bind-Value="_contact.Message" />
+                            <ValidationMessage For="() => _contact.Message" />
+                        </div>
+                        <button class="btn btn-primary" type="submit" disabled="@_submitting">
+                            @(_submitting ? "Sending…" : "Submit inquiry")
+                        </button>
+                    </EditForm>
+                </div>
+            </section>
+
+            <p class="small text-secondary text-center mt-4 mb-0">
+                @_profile.FooterNote
+            </p>
+        </div>
+    </div>
+}
+
+@code {
+    private PublicProfileDto? _profile;
+    private string? _loadError;
+    private readonly ContactFormModel _contact = new();
+    private string? _submitSuccess;
+    private string? _submitError;
+    private bool _submitting;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            _profile = await ProfileApi.GetPublicProfileAsync();
+            if (_profile is null)
+            {
+                _loadError = "Profile could not be loaded from the API.";
+            }
+        }
+        catch (Exception ex)
+        {
+            _loadError = $"Unable to load profile: {ex.Message}";
+        }
+    }
+
+    private async Task SubmitContactAsync()
+    {
+        _submitSuccess = null;
+        _submitError = null;
+        _submitting = true;
+        try
+        {
+            var request = new ContactLeadRequestDto(
+                _contact.Name.Trim(),
+                _contact.Email.Trim(),
+                string.IsNullOrWhiteSpace(_contact.Organization) ? null : _contact.Organization.Trim(),
+                _contact.Message.Trim());
+
+            var created = await ContactApi.SubmitLeadAsync(request);
+            _submitSuccess = created is null
+                ? "Thank you — your message was received."
+                : $"Thank you — reference id {created.Id:N}.";
+
+            _contact.Name = string.Empty;
+            _contact.Email = string.Empty;
+            _contact.Organization = null;
+            _contact.Message = string.Empty;
+        }
+        catch (Exception ex)
+        {
+            _submitError = $"Submit failed: {ex.Message}";
+        }
+        finally
+        {
+            _submitting = false;
+        }
+    }
+
+    private sealed class ContactFormModel
+    {
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Name is required.")]
+        [System.ComponentModel.DataAnnotations.StringLength(120, MinimumLength = 1)]
+        public string Name { get; set; } = string.Empty;
+
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Email is required.")]
+        [System.ComponentModel.DataAnnotations.EmailAddress]
+        [System.ComponentModel.DataAnnotations.StringLength(256)]
+        public string Email { get; set; } = string.Empty;
+
+        [System.ComponentModel.DataAnnotations.StringLength(200)]
+        public string? Organization { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Required(ErrorMessage = "Message is required.")]
+        [System.ComponentModel.DataAnnotations.StringLength(4000, MinimumLength = 10)]
+        public string Message { get; set; } = string.Empty;
+    }
+}
