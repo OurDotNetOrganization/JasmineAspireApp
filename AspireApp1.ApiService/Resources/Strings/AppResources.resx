@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApiRootStatus" xml:space="preserve">
+    <value>API service is running. Navigate to /weatherforecast to see sample data.</value>
+  </data>
+  <data name="AuthUsernamePasswordRequired" xml:space="preserve">
+    <value>Username and password are required.</value>
+  </data>
+  <data name="RequestBodyRequired" xml:space="preserve">
+    <value>Request body is required.</value>
+  </data>
+  <data name="NameValidation" xml:space="preserve">
+    <value>Name is required and must be 120 characters or fewer.</value>
+  </data>
+  <data name="EmailValidation" xml:space="preserve">
+    <value>A valid email is required (256 characters or fewer).</value>
+  </data>
+  <data name="OrganizationValidation" xml:space="preserve">
+    <value>Organization must be 200 characters or fewer.</value>
+  </data>
+  <data name="MessageValidation" xml:space="preserve">
+    <value>Message must be between 10 and 4000 characters.</value>
+  </data>
+  <data name="FieldRequiredMax" xml:space="preserve">
+    <value>{0} is required and must be {1} characters or fewer.</value>
+  </data>
+  <data name="LinksValidation" xml:space="preserve">
+    <value>Links must include valid absolute URLs for LinkedIn, Optomatica, and Racemate.</value>
+  </data>
+  <data name="ValueOutcomesValidation" xml:space="preserve">
+    <value>ValueOutcomes must contain between 1 and 20 items.</value>
+  </data>
+  <data name="FocusAreasValidation" xml:space="preserve">
+    <value>FocusAreas must contain between 1 and 20 items.</value>
+  </data>
+  <data name="CurrentRolesValidation" xml:space="preserve">
+    <value>CurrentRoles must contain between 1 and 20 items.</value>
+  </data>
+  <data name="HighlightBulletsValidation" xml:space="preserve">
+    <value>HighlightBullets must contain between 1 and 50 items.</value>
+  </data>
+  <data name="SelectedExperienceValidation" xml:space="preserve">
+    <value>SelectedExperience must contain between 1 and 50 items.</value>
+  </data>
+  <data name="SkillsValidation" xml:space="preserve">
+    <value>Skills must contain between 1 and 100 items.</value>
+  </data>
+  <data name="WeatherFreezing" xml:space="preserve">
+    <value>Freezing</value>
+  </data>
+  <data name="WeatherBracing" xml:space="preserve">
+    <value>Bracing</value>
+  </data>
+  <data name="WeatherChilly" xml:space="preserve">
+    <value>Chilly</value>
+  </data>
+  <data name="WeatherCool" xml:space="preserve">
+    <value>Cool</value>
+  </data>
+  <data name="WeatherMild" xml:space="preserve">
+    <value>Mild</value>
+  </data>
+  <data name="WeatherWarm" xml:space="preserve">
+    <value>Warm</value>
+  </data>
+  <data name="WeatherBalmy" xml:space="preserve">
+    <value>Balmy</value>
+  </data>
+  <data name="WeatherHot" xml:space="preserve">
+    <value>Hot</value>
+  </data>
+  <data name="WeatherSweltering" xml:space="preserve">
+    <value>Sweltering</value>
+  </data>
+  <data name="WeatherScorching" xml:space="preserve">
+    <value>Scorching</value>
+  </data>
+</root>

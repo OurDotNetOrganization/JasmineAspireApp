@@ -4,8 +4,10 @@ using AspireApp1.ApiService;
 using AspireApp1.ApiService.Auth;
 using AspireApp1.ApiService.Contracts;
 using AspireApp1.ApiService.Repositories;
+using AspireApp1.ApiService.Resources.Strings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,7 @@ builder.Services.AddProblemDetails();
 builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddLocalization();
 
 builder.Services.AddSingleton<IProfileRepository, InMemoryProfileRepository>();
 builder.Services.AddSingleton<IContactLeadRepository, InMemoryContactLeadRepository>();
@@ -56,6 +59,11 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 app.UseExceptionHandler();
+var supportedCultures = new[] { "en", "ar-EG" };
+app.UseRequestLocalization(new RequestLocalizationOptions()
+    .SetDefaultCulture("en")
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures));
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -66,13 +74,25 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-string[] summaries = ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
-
-app.MapGet("/", () => "API service is running. Navigate to /weatherforecast to see sample data.")
+app.MapGet("/", () => AppResources.ApiRootStatus)
     .AllowAnonymous();
 
 app.MapGet("/weatherforecast", () =>
 {
+    string[] summaries =
+    [
+        AppResources.WeatherFreezing,
+        AppResources.WeatherBracing,
+        AppResources.WeatherChilly,
+        AppResources.WeatherCool,
+        AppResources.WeatherMild,
+        AppResources.WeatherWarm,
+        AppResources.WeatherBalmy,
+        AppResources.WeatherHot,
+        AppResources.WeatherSweltering,
+        AppResources.WeatherScorching
+    ];
+
     var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
@@ -135,7 +155,7 @@ api.MapPost("/auth/token", (IHostEnvironment environment, IConfiguration configu
 
         if (body is null || string.IsNullOrWhiteSpace(body.Username) || string.IsNullOrWhiteSpace(body.Password))
         {
-            return Results.BadRequest("Username and password are required.");
+            return Results.BadRequest(AppResources.AuthUsernamePasswordRequired);
         }
 
         var expectedUser = configuration["Jwt:DevAdminUsername"] ?? "admin";

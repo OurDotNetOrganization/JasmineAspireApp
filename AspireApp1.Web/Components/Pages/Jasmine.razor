@@ -4,9 +4,9 @@
 @inject ProfileApiClient ProfileApi
 @inject ContactApiClient ContactApi
 
-<PageTitle>Jasmine Dwidar — Marketing, Communications &amp; Partnerships</PageTitle>
+<PageTitle>@AppResources.JasminePageTitle</PageTitle>
 
-<a href="#jasmine-main" class="jasmine-skip btn btn-sm btn-outline-secondary position-absolute m-2">Skip to main content</a>
+<a href="#jasmine-main" class="jasmine-skip btn btn-sm btn-outline-secondary position-absolute m-2">@AppResources.SkipToMainContent</a>
 
 @if (!string.IsNullOrEmpty(_loadError))
 {
@@ -19,7 +19,7 @@
 else if (_profile is null)
 {
     <div class="container py-5">
-        <p class="lead"><em>Loading profile…</em></p>
+        <p class="lead"><em>@AppResources.LoadingProfile</em></p>
     </div>
 }
 else
@@ -29,19 +29,19 @@ else
             <p class="jasmine-kicker mb-2">@_profile.Kicker</p>
             <h1 id="jasmine-hero-heading" class="display-5 fw-semibold mb-3">@_profile.FullName</h1>
             <p class="jasmine-tagline lead mb-4">@_profile.HeroParagraph</p>
-            <div class="d-flex flex-wrap gap-2" role="group" aria-label="Primary actions">
+            <div class="d-flex flex-wrap gap-2" role="group" aria-label="@AppResources.PrimaryActions">
                 <a class="btn btn-light btn-lg"
                    href="@_profile.Links.LinkedIn"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Open Jasmine Dwidar on LinkedIn (opens in a new tab)">
-                    Message on LinkedIn
+                   aria-label="@AppResources.OpenLinkedInAria">
+                    @AppResources.MessageOnLinkedIn
                 </a>
                 <a class="btn btn-outline-light btn-lg" href="#jasmine-value">
-                    Why work together
+                    @AppResources.WhyWorkTogether
                 </a>
             </div>
-            <p class="small text-white-50 mt-3 mb-0">Partnerships, press, and speaking: LinkedIn is the fastest way to reach me.</p>
+            <p class="small text-white-50 mt-3 mb-0">@AppResources.PartnershipsFastest</p>
         </div>
     </section>
 
@@ -59,7 +59,7 @@ else
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-focus-heading">
-                <h2 id="jasmine-focus-heading" class="jasmine-section-title">Focus areas</h2>
+                <h2 id="jasmine-focus-heading" class="jasmine-section-title">@AppResources.FocusAreas</h2>
                 <div class="row g-3">
                     @foreach (var card in _profile.FocusAreas)
                     {
@@ -74,7 +74,7 @@ else
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-roles-heading">
-                <h2 id="jasmine-roles-heading" class="jasmine-section-title">Current roles</h2>
+                <h2 id="jasmine-roles-heading" class="jasmine-section-title">@AppResources.CurrentRoles</h2>
                 <ul class="list-unstyled">
                     @foreach (var role in _profile.CurrentRoles)
                     {
@@ -96,13 +96,13 @@ else
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-about-heading">
-                <h2 id="jasmine-about-heading" class="jasmine-section-title">About</h2>
+                <h2 id="jasmine-about-heading" class="jasmine-section-title">@AppResources.About</h2>
                 <p class="fs-6 text-body-secondary lh-lg mb-3">@_profile.AboutBody</p>
                 <p class="text-body-secondary small mb-0"><strong>@_profile.AboutMetaLine</strong></p>
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-highlights-heading">
-                <h2 id="jasmine-highlights-heading" class="jasmine-section-title">Public profile highlights</h2>
+                <h2 id="jasmine-highlights-heading" class="jasmine-section-title">@AppResources.PublicHighlights</h2>
                 <p class="text-body-secondary small mb-3">@_profile.HighlightsIntro</p>
                 <ul class="list-unstyled jasmine-highlights">
                     @foreach (var bullet in _profile.HighlightBullets)
@@ -116,7 +116,7 @@ else
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-selected-heading">
-                <h2 id="jasmine-selected-heading" class="jasmine-section-title">Selected experience</h2>
+                <h2 id="jasmine-selected-heading" class="jasmine-section-title">@AppResources.SelectedExperience</h2>
                 <ul class="list-unstyled">
                     @foreach (var line in _profile.SelectedExperience)
                     {
@@ -131,24 +131,24 @@ else
             </section>
 
             <section class="mb-5 p-4 rounded-3 border bg-white shadow-sm" aria-labelledby="jasmine-testimonial-heading">
-                <h2 id="jasmine-testimonial-heading" class="h6 text-uppercase text-secondary letter-spacing mb-3">Recommendation (LinkedIn)</h2>
+                <h2 id="jasmine-testimonial-heading" class="h6 text-uppercase text-secondary letter-spacing mb-3">@AppResources.RecommendationLinkedIn</h2>
                 <blockquote class="blockquote mb-2 fs-6 text-body-secondary">
                     &ldquo;@_profile.TestimonialQuote&rdquo;
                 </blockquote>
                 <p class="small text-body-secondary mb-0">
                     — @_profile.TestimonialAttribution
-                    <a href="@_profile.Links.LinkedIn" target="_blank" rel="noopener noreferrer" class="ms-1" aria-label="View profile on LinkedIn (opens in a new tab)">View on LinkedIn</a>
+                    <a href="@_profile.Links.LinkedIn" target="_blank" rel="noopener noreferrer" class="ms-1" aria-label="@AppResources.OpenLinkedInAria">@AppResources.ViewOnLinkedIn</a>
                 </p>
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-edu-heading">
-                <h2 id="jasmine-edu-heading" class="jasmine-section-title">Education &amp; learning</h2>
+                <h2 id="jasmine-edu-heading" class="jasmine-section-title">@AppResources.EducationLearning</h2>
                 <p class="mb-2"><strong>@_profile.EducationPrimary</strong></p>
                 <p class="text-body-secondary small mb-0">@_profile.EducationFootnote</p>
             </section>
 
             <section class="mb-5" aria-labelledby="jasmine-skills-heading">
-                <h2 id="jasmine-skills-heading" class="jasmine-section-title">Core strengths</h2>
+                <h2 id="jasmine-skills-heading" class="jasmine-section-title">@AppResources.CoreStrengths</h2>
                 <div class="d-flex flex-wrap gap-2" role="list">
                     @foreach (var skill in _profile.Skills)
                     {
@@ -164,12 +164,12 @@ else
                    href="@_profile.Links.LinkedIn"
                    target="_blank"
                    rel="noopener noreferrer"
-                   aria-label="Open Jasmine Dwidar on LinkedIn (opens in a new tab)">
-                    Open LinkedIn profile
+                   aria-label="@AppResources.OpenLinkedInAria">
+                    @AppResources.OpenLinkedInProfile
                 </a>
 
                 <div class="bg-white text-dark rounded-3 p-4 text-start shadow-sm">
-                    <h3 class="h6 mb-3">Send a partnership inquiry</h3>
+                    <h3 class="h6 mb-3">@AppResources.SendPartnershipInquiry</h3>
                     @if (!string.IsNullOrEmpty(_submitSuccess))
                     {
                         <div class="alert alert-success" role="status">@_submitSuccess</div>
@@ -182,27 +182,27 @@ else
                         <DataAnnotationsValidator />
                         <ValidationSummary class="text-danger" />
                         <div class="mb-3">
-                            <label class="form-label" for="contact-name">Name</label>
+                            <label class="form-label" for="contact-name">@AppResources.Name</label>
                             <InputText id="contact-name" class="form-control" @bind-Value="_contact.Name" />
                             <ValidationMessage For="() => _contact.Name" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="contact-email">Email</label>
+                            <label class="form-label" for="contact-email">@AppResources.Email</label>
                             <InputText id="contact-email" type="email" class="form-control" @bind-Value="_contact.Email" />
                             <ValidationMessage For="() => _contact.Email" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="contact-org">Organization (optional)</label>
+                            <label class="form-label" for="contact-org">@AppResources.OrganizationOptional</label>
                             <InputText id="contact-org" class="form-control" @bind-Value="_contact.Organization" />
                             <ValidationMessage For="() => _contact.Organization" />
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="contact-message">Message</label>
+                            <label class="form-label" for="contact-message">@AppResources.Message</label>
                             <InputTextArea id="contact-message" class="form-control" rows="4" @bind-Value="_contact.Message" />
                             <ValidationMessage For="() => _contact.Message" />
                         </div>
                         <button class="btn btn-primary" type="submit" disabled="@_submitting">
-                            @(_submitting ? "Sending…" : "Submit inquiry")
+                            @(_submitting ? AppResources.Sending : AppResources.SubmitInquiry)
                         </button>
                     </EditForm>
                 </div>
@@ -230,12 +230,12 @@ else
             _profile = await ProfileApi.GetPublicProfileAsync();
             if (_profile is null)
             {
-                _loadError = "Profile could not be loaded from the API.";
+                _loadError = AppResources.JasmineLoadErrorNoData;
             }
         }
         catch (Exception ex)
         {
-            _loadError = $"Unable to load profile: {ex.Message}";
+            _loadError = AppResources.FormatJasmineLoadError(ex.Message);
         }
     }
 
@@ -254,8 +254,8 @@ else
 
             var created = await ContactApi.SubmitLeadAsync(request);
             _submitSuccess = created is null
-                ? "Thank you — your message was received."
-                : $"Thank you — reference id {created.Id:N}.";
+                ? AppResources.SubmitSuccess
+                : AppResources.FormatSubmitSuccessRef(created.Id.ToString("N"));
 
             _contact.Name = string.Empty;
             _contact.Email = string.Empty;
@@ -264,7 +264,7 @@ else
         }
         catch (Exception ex)
         {
-            _submitError = $"Submit failed: {ex.Message}";
+            _submitError = AppResources.FormatSubmitFailed(ex.Message);
         }
         finally
         {

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="BrandTitle" xml:space="preserve"><value>Portfolio demo</value></data>
+  <data name="NavHome" xml:space="preserve"><value>Home</value></data>
+  <data name="NavJasmine" xml:space="preserve"><value>Jasmine</value></data>
+  <data name="NavCounter" xml:space="preserve"><value>Counter</value></data>
+  <data name="NavWeather" xml:space="preserve"><value>Weather</value></data>
+  <data name="AboutLink" xml:space="preserve"><value>About</value></data>
+  <data name="UnhandledError" xml:space="preserve"><value>An unhandled error has occurred.</value></data>
+  <data name="Reload" xml:space="preserve"><value>Reload</value></data>
+  <data name="HomePageTitle" xml:space="preserve"><value>Home</value></data>
+  <data name="HomeWelcome" xml:space="preserve"><value>Welcome</value></data>
+  <data name="HomeLead" xml:space="preserve"><value>This Aspire sample includes a hybrid profile + partnerships page for Jasmine Dwidar, focused on AI communications, sportstech growth, and ethical storytelling.</value></data>
+  <data name="HomeOpenProfile" xml:space="preserve"><value>Open Jasmine's hybrid profile</value></data>
+  <data name="HomeHint" xml:space="preserve"><value>Use the sidebar for sample Counter and Weather pages, or go straight to the profile.</value></data>
+  <data name="CounterPageTitle" xml:space="preserve"><value>Counter</value></data>
+  <data name="CurrentCount" xml:space="preserve"><value>Current count: {0}</value></data>
+  <data name="ClickMe" xml:space="preserve"><value>Click me</value></data>
+  <data name="WeatherPageTitle" xml:space="preserve"><value>Weather</value></data>
+  <data name="WeatherDescription" xml:space="preserve"><value>This component demonstrates showing data loaded from a backend API service.</value></data>
+  <data name="Loading" xml:space="preserve"><value>Loading...</value></data>
+  <data name="Date" xml:space="preserve"><value>Date</value></data>
+  <data name="TempC" xml:space="preserve"><value>Temp. (C)</value></data>
+  <data name="TempF" xml:space="preserve"><value>Temp. (F)</value></data>
+  <data name="Summary" xml:space="preserve"><value>Summary</value></data>
+  <data name="TempCAria" xml:space="preserve"><value>Temperature in Celsius</value></data>
+  <data name="TempFAria" xml:space="preserve"><value>Temperature in Fahrenheit</value></data>
+  <data name="JasminePageTitle" xml:space="preserve"><value>Jasmine Dwidar — Marketing, Communications &amp; Partnerships</value></data>
+  <data name="SkipToMainContent" xml:space="preserve"><value>Skip to main content</value></data>
+  <data name="JasmineLoadErrorNoData" xml:space="preserve"><value>Profile could not be loaded from the API.</value></data>
+  <data name="LoadingProfile" xml:space="preserve"><value>Loading profile…</value></data>
+  <data name="JasmineLoadError" xml:space="preserve"><value>Unable to load profile: {0}</value></data>
+  <data name="PrimaryActions" xml:space="preserve"><value>Primary actions</value></data>
+  <data name="OpenLinkedInAria" xml:space="preserve"><value>Open Jasmine Dwidar on LinkedIn (opens in a new tab)</value></data>
+  <data name="MessageOnLinkedIn" xml:space="preserve"><value>Message on LinkedIn</value></data>
+  <data name="WhyWorkTogether" xml:space="preserve"><value>Why work together</value></data>
+  <data name="PartnershipsFastest" xml:space="preserve"><value>Partnerships, press, and speaking: LinkedIn is the fastest way to reach me.</value></data>
+  <data name="FocusAreas" xml:space="preserve"><value>Focus areas</value></data>
+  <data name="CurrentRoles" xml:space="preserve"><value>Current roles</value></data>
+  <data name="About" xml:space="preserve"><value>About</value></data>
+  <data name="PublicHighlights" xml:space="preserve"><value>Public profile highlights</value></data>
+  <data name="SelectedExperience" xml:space="preserve"><value>Selected experience</value></data>
+  <data name="RecommendationLinkedIn" xml:space="preserve"><value>Recommendation (LinkedIn)</value></data>
+  <data name="ViewOnLinkedIn" xml:space="preserve"><value>View on LinkedIn</value></data>
+  <data name="EducationLearning" xml:space="preserve"><value>Education &amp; learning</value></data>
+  <data name="CoreStrengths" xml:space="preserve"><value>Core strengths</value></data>
+  <data name="OpenLinkedInProfile" xml:space="preserve"><value>Open LinkedIn profile</value></data>
+  <data name="SendPartnershipInquiry" xml:space="preserve"><value>Send a partnership inquiry</value></data>
+  <data name="Name" xml:space="preserve"><value>Name</value></data>
+  <data name="Email" xml:space="preserve"><value>Email</value></data>
+  <data name="OrganizationOptional" xml:space="preserve"><value>Organization (optional)</value></data>
+  <data name="Message" xml:space="preserve"><value>Message</value></data>
+  <data name="Sending" xml:space="preserve"><value>Sending…</value></data>
+  <data name="SubmitInquiry" xml:space="preserve"><value>Submit inquiry</value></data>
+  <data name="SubmitSuccess" xml:space="preserve"><value>Thank you — your message was received.</value></data>
+  <data name="SubmitSuccessRef" xml:space="preserve"><value>Thank you — reference id {0}.</value></data>
+  <data name="SubmitFailed" xml:space="preserve"><value>Submit failed: {0}</value></data>
+</root>

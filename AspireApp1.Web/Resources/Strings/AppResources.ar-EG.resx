@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="BrandTitle" xml:space="preserve"><value>عرض السيرة</value></data>
+  <data name="NavHome" xml:space="preserve"><value>الرئيسية</value></data>
+  <data name="NavJasmine" xml:space="preserve"><value>جاسمين</value></data>
+  <data name="NavCounter" xml:space="preserve"><value>العداد</value></data>
+  <data name="NavWeather" xml:space="preserve"><value>الطقس</value></data>
+  <data name="AboutLink" xml:space="preserve"><value>حول</value></data>
+  <data name="UnhandledError" xml:space="preserve"><value>حدث خطأ غير معالج.</value></data>
+  <data name="Reload" xml:space="preserve"><value>إعادة تحميل</value></data>
+  <data name="HomePageTitle" xml:space="preserve"><value>الرئيسية</value></data>
+  <data name="HomeWelcome" xml:space="preserve"><value>مرحبًا</value></data>
+  <data name="HomeLead" xml:space="preserve"><value>هذا المثال من Aspire يتضمن صفحة هجينة للملف الشخصي والشراكات لجاسمين دويدار، مع تركيز على اتصالات الذكاء الاصطناعي ونمو تقنيات الرياضة والسرد الأخلاقي.</value></data>
+  <data name="HomeOpenProfile" xml:space="preserve"><value>افتح ملف جاسمين الهجين</value></data>
+  <data name="HomeHint" xml:space="preserve"><value>استخدم الشريط الجانبي لصفحات العداد والطقس، أو انتقل مباشرة إلى الملف الشخصي.</value></data>
+  <data name="CounterPageTitle" xml:space="preserve"><value>العداد</value></data>
+  <data name="CurrentCount" xml:space="preserve"><value>القيمة الحالية: {0}</value></data>
+  <data name="ClickMe" xml:space="preserve"><value>اضغطني</value></data>
+  <data name="WeatherPageTitle" xml:space="preserve"><value>الطقس</value></data>
+  <data name="WeatherDescription" xml:space="preserve"><value>يوضح هذا المكون عرض بيانات محملة من خدمة API خلفية.</value></data>
+  <data name="Loading" xml:space="preserve"><value>جارٍ التحميل...</value></data>
+  <data name="Date" xml:space="preserve"><value>التاريخ</value></data>
+  <data name="TempC" xml:space="preserve"><value>درجة مئوية</value></data>
+  <data name="TempF" xml:space="preserve"><value>درجة فهرنهايت</value></data>
+  <data name="Summary" xml:space="preserve"><value>الوصف</value></data>
+  <data name="TempCAria" xml:space="preserve"><value>درجة الحرارة بالمئوية</value></data>
+  <data name="TempFAria" xml:space="preserve"><value>درجة الحرارة بالفهرنهايت</value></data>
+  <data name="JasminePageTitle" xml:space="preserve"><value>جاسمين دويدار — التسويق والاتصالات والشراكات</value></data>
+  <data name="SkipToMainContent" xml:space="preserve"><value>تخطي إلى المحتوى الرئيسي</value></data>
+  <data name="JasmineLoadErrorNoData" xml:space="preserve"><value>تعذر تحميل الملف الشخصي من API.</value></data>
+  <data name="LoadingProfile" xml:space="preserve"><value>جارٍ تحميل الملف الشخصي…</value></data>
+  <data name="JasmineLoadError" xml:space="preserve"><value>تعذر تحميل الملف الشخصي: {0}</value></data>
+  <data name="PrimaryActions" xml:space="preserve"><value>إجراءات أساسية</value></data>
+  <data name="OpenLinkedInAria" xml:space="preserve"><value>افتح جاسمين دويدار على لينكدإن (يفتح في تبويب جديد)</value></data>
+  <data name="MessageOnLinkedIn" xml:space="preserve"><value>راسلني على لينكدإن</value></data>
+  <data name="WhyWorkTogether" xml:space="preserve"><value>لماذا نعمل معًا</value></data>
+  <data name="PartnershipsFastest" xml:space="preserve"><value>للشراكات والإعلام والتحدث: لينكدإن هو أسرع وسيلة للوصول إليّ.</value></data>
+  <data name="FocusAreas" xml:space="preserve"><value>مجالات التركيز</value></data>
+  <data name="CurrentRoles" xml:space="preserve"><value>الأدوار الحالية</value></data>
+  <data name="About" xml:space="preserve"><value>نبذة</value></data>
+  <data name="PublicHighlights" xml:space="preserve"><value>أبرز الملامح العامة</value></data>
+  <data name="SelectedExperience" xml:space="preserve"><value>خبرات مختارة</value></data>
+  <data name="RecommendationLinkedIn" xml:space="preserve"><value>توصية (لينكدإن)</value></data>
+  <data name="ViewOnLinkedIn" xml:space="preserve"><value>عرض على لينكدإن</value></data>
+  <data name="EducationLearning" xml:space="preserve"><value>التعليم والتعلم</value></data>
+  <data name="CoreStrengths" xml:space="preserve"><value>نقاط القوة الأساسية</value></data>
+  <data name="OpenLinkedInProfile" xml:space="preserve"><value>فتح ملف لينكدإن</value></data>
+  <data name="SendPartnershipInquiry" xml:space="preserve"><value>أرسل استفسار شراكة</value></data>
+  <data name="Name" xml:space="preserve"><value>الاسم</value></data>
+  <data name="Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
+  <data name="OrganizationOptional" xml:space="preserve"><value>المؤسسة (اختياري)</value></data>
+  <data name="Message" xml:space="preserve"><value>الرسالة</value></data>
+  <data name="Sending" xml:space="preserve"><value>جارٍ الإرسال…</value></data>
+  <data name="SubmitInquiry" xml:space="preserve"><value>إرسال الاستفسار</value></data>
+  <data name="SubmitSuccess" xml:space="preserve"><value>شكرًا — تم استلام رسالتك.</value></data>
+  <data name="SubmitSuccessRef" xml:space="preserve"><value>شكرًا — رقم المرجع {0}.</value></data>
+  <data name="SubmitFailed" xml:space="preserve"><value>فشل الإرسال: {0}</value></data>
+</root>

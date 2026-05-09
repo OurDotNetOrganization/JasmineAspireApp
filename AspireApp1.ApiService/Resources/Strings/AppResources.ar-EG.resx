@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApiRootStatus" xml:space="preserve">
+    <value>خدمة واجهة البرمجة تعمل. انتقل إلى ‎/weatherforecast‎ لعرض بيانات تجريبية.</value>
+  </data>
+  <data name="AuthUsernamePasswordRequired" xml:space="preserve">
+    <value>اسم المستخدم وكلمة المرور مطلوبان.</value>
+  </data>
+  <data name="RequestBodyRequired" xml:space="preserve">
+    <value>نص الطلب مطلوب.</value>
+  </data>
+  <data name="NameValidation" xml:space="preserve">
+    <value>الاسم مطلوب ويجب ألا يتجاوز 120 حرفًا.</value>
+  </data>
+  <data name="EmailValidation" xml:space="preserve">
+    <value>بريد إلكتروني صالح مطلوب (حتى 256 حرفًا).</value>
+  </data>
+  <data name="OrganizationValidation" xml:space="preserve">
+    <value>يجب ألا تتجاوز المؤسسة 200 حرف.</value>
+  </data>
+  <data name="MessageValidation" xml:space="preserve">
+    <value>يجب أن تكون الرسالة بين 10 و4000 حرف.</value>
+  </data>
+  <data name="FieldRequiredMax" xml:space="preserve">
+    <value>الحقل {0} مطلوب ويجب ألا يتجاوز {1} حرفًا.</value>
+  </data>
+  <data name="LinksValidation" xml:space="preserve">
+    <value>يجب أن تتضمن الروابط عناوين URL مطلقة وصالحة لـ LinkedIn وOptomatica وRacemate.</value>
+  </data>
+  <data name="ValueOutcomesValidation" xml:space="preserve">
+    <value>يجب أن يحتوي ValueOutcomes على 1 إلى 20 عنصرًا.</value>
+  </data>
+  <data name="FocusAreasValidation" xml:space="preserve">
+    <value>يجب أن يحتوي FocusAreas على 1 إلى 20 عنصرًا.</value>
+  </data>
+  <data name="CurrentRolesValidation" xml:space="preserve">
+    <value>يجب أن يحتوي CurrentRoles على 1 إلى 20 عنصرًا.</value>
+  </data>
+  <data name="HighlightBulletsValidation" xml:space="preserve">
+    <value>يجب أن يحتوي HighlightBullets على 1 إلى 50 عنصرًا.</value>
+  </data>
+  <data name="SelectedExperienceValidation" xml:space="preserve">
+    <value>يجب أن يحتوي SelectedExperience على 1 إلى 50 عنصرًا.</value>
+  </data>
+  <data name="SkillsValidation" xml:space="preserve">
+    <value>يجب أن يحتوي Skills على 1 إلى 100 عنصر.</value>
+  </data>
+  <data name="WeatherFreezing" xml:space="preserve">
+    <value>شديد البرودة</value>
+  </data>
+  <data name="WeatherBracing" xml:space="preserve">
+    <value>بارد ومنعش</value>
+  </data>
+  <data name="WeatherChilly" xml:space="preserve">
+    <value>بارد</value>
+  </data>
+  <data name="WeatherCool" xml:space="preserve">
+    <value>معتدل البرودة</value>
+  </data>
+  <data name="WeatherMild" xml:space="preserve">
+    <value>لطيف</value>
+  </data>
+  <data name="WeatherWarm" xml:space="preserve">
+    <value>دافئ</value>
+  </data>
+  <data name="WeatherBalmy" xml:space="preserve">
+    <value>معتدل دافئ</value>
+  </data>
+  <data name="WeatherHot" xml:space="preserve">
+    <value>حار</value>
+  </data>
+  <data name="WeatherSweltering" xml:space="preserve">
+    <value>حار جدًا</value>
+  </data>
+  <data name="WeatherScorching" xml:space="preserve">
+    <value>لافح الحرارة</value>
+  </data>
+</root>
