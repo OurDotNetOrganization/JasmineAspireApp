@@ -14,6 +14,8 @@ namespace MauiApp2
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddSingleton<JasmineApiClient>();
+
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

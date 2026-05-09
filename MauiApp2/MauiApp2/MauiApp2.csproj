@@ -7,6 +7,7 @@
 		<RootNamespace>MauiApp2</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<Nullable>enable</Nullable>
+		<NeutralLanguage>en</NeutralLanguage>
 
 		<!-- Enable XAML source generation for faster build times and improved performance.
 		     This generates C# code from XAML at compile time instead of runtime inflation.

@@ -1,4 +1,6 @@
-﻿namespace MauiApp2
+﻿using System.Globalization;
+
+namespace MauiApp2
 {
     public partial class App : Application
     {
@@ -9,7 +11,11 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            var shell = new AppShell();
+            shell.FlowDirection = CultureInfo.CurrentUICulture.TextInfo.IsRightToLeft
+                ? FlowDirection.RightToLeft
+                : FlowDirection.LeftToRight;
+            return new Window(shell);
         }
     }
 }
